@@ -1,5 +1,11 @@
 package  chapter2 {
+
   object ex6 extends App {
-    for (i <- 0 to 10) println(10 - i)
+    def prod(desc:String) :BigInt ={
+      {for (i <- "Hello") yield BigInt(i)}.product
+    }
+
+    assert(prod("Hello") == 9415087488L)
+
   }
 }
