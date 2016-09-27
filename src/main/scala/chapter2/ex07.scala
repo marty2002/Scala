@@ -2,7 +2,7 @@
   * Created by kirill on 27.09.2016.
   */
 package  chapter2 {
-  object ex7 extends App {
+  object ex07 extends App {
     def prod(desc:String) :BigInt ={
       desc.map(BigInt(_)).product
     }
