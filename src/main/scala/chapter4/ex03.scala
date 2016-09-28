@@ -7,7 +7,7 @@ package chapter4 {
   import scala.collection.mutable.ArrayBuffer
 
   object ex03 extends App {
-    val in = new java.util.Scanner(new java.io.File("txt\\chapter4Ex02.txt"))
+    val in = new java.util.Scanner(new java.io.File("txt\\chapter4Ex03.txt"))
     val words: ArrayBuffer[String] = new ArrayBuffer[String]()
     while (in.hasNext) words += in.next
 
