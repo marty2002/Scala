@@ -3,10 +3,10 @@
   */
 
 object ex08 extends App {
-  def minmax(values: Array[Int]): (Int, Int) = {
-    (values.min, values.max)
+  def lteqgt(values: Array[Int], v: Int): (Int, Int, Int) = {
+    (values.count(_<v), values.count(_==v), values.count(_>v))
   }
 
-  assert(minmax(Array( 1,  2,  3,  4,  5,  6)) == ( 1,  6))
-  assert(minmax(Array(-1, -2, -3, -4, -5, -6)) == (-6, -1))
+  assert(lteqgt(Array( 1,  2,  3,  4,  5,  6),  3) == (2, 1, 3))
+  assert(lteqgt(Array(-1, -2, -3, -4, -5, -6), -3) == (3, 1, 2))
 }
