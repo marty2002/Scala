@@ -3,8 +3,6 @@
   */
 package chapter5 {
 
-  import com.sun.javafx.sg.PGShape.Mode
-
   object ex08 extends App {
     class Car (
       private val m: String,
