@@ -12,8 +12,8 @@ package chapter8 {
     class SimpleItem (override val price: Int, override val description: String) extends Item() {}
 
     class Bundle (private val list: List[SimpleItem]=List()) {
-      def add(value: SimpleItem): Bundle = new Bundle(List(list, List(value)).flatten)
-      def price: Int = list.foldLeft(0)((x:Int, y:SimpleItem)=>x+y.price)
+      def add(value: SimpleItem): Bundle = Bundle(List(list, List(value)).flatten)
+      def price: Int          = list.map(_.price).sum
       def description: String = list.map(_.description).mkString(", ")
     }
 
