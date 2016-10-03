@@ -7,6 +7,7 @@ package chapter8 {
   object ex05 extends App {
 
     class Point(val x: Double, val y: Double) {}
+    object Point {def apply(x: Double, y: Double): Point = new Point(x, y)}
 
     class LabeledPoint(private val l: String, override val x: Double, override val y: Double) extends Point(x, y) {
       def label = l
