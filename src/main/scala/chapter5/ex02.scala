@@ -4,9 +4,9 @@
 
 package chapter5 {
   object ex02 extends App {
-    class BankAccount (private val current: Int = 0) {
-      def deposit(v: Int) = new BankAccount(current+v)
-      def withdraw(v: Int)= new BankAccount(current-v)
+    class BankAccount (private val current: Double = 0) {
+      def deposit(v: Double) = new BankAccount(current+v)
+      def withdraw(v: Double)= new BankAccount(current-v)
       def balance = current
     }
 
