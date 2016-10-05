@@ -1,0 +1,4 @@
+<img src="test1"> какой то текст <img/>
+<img что то ещё src="test2">
+<img что то ещё src= test3>
+       
