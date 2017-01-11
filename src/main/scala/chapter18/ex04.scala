@@ -6,9 +6,9 @@
 package  chapter18 {
   import scala.collection.mutable.ArrayBuffer
   object ex04 extends App {
-    class Network { outer =>
-
-      class Member(val name: String, val network: Network=outer) {
+    class Network {
+      class Member(val name: String) {
+        val network: Network=Network.this
         override def equals(that: Any): Boolean = {
           this.network == that.asInstanceOf[Member].network
         }
